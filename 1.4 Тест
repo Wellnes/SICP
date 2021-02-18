@@ -8,6 +8,6 @@
 			(and (< b a) (< b c)) 
 			(+ (* a a) (* c c) ) 
 		)
-		(else (+ (* a a) (* b b) )) ara
+		(else (+ (* a a) (* b b) )) 
 	)
  )
