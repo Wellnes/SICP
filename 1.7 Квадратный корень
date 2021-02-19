@@ -1,0 +1,31 @@
+(define (averge x y)
+	(/ (+ x y) 2 )
+)
+
+(define (improve guess x )
+	(averge guess (/ x guess) )
+)
+
+(define (square x)
+	(* x x)
+)
+
+(define (sqrt-iter guess x)
+	(if (good-enough? guess (improve guess x) )
+		guess
+		(sqrt-iter (improve guess x) x)
+	)
+)
+
+(define (good-enough? guess-original guess-init)
+	(< 
+		(abs 
+			(- guess-original guess-init ) 
+		) 
+		0.001  
+	)
+)
+
+(define (mysqrt x)
+	(sqrt-iter 1.0 x)
+)
